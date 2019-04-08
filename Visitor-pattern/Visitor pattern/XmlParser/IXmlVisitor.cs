@@ -2,8 +2,8 @@
 {
     internal interface IXmlVisitor
     {
-        void Visit(Element element);
+        void Visit(StartingElement element);
         void Visit(EndElement end);
-        void Visit(Text text);
+        void Visit(InnerText text);
     }
 }

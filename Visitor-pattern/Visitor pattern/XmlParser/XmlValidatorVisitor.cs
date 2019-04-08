@@ -7,7 +7,7 @@
 
         public bool IsValid => elements == endEmelents;
 
-        public void Visit(Element element)
+        public void Visit(StartingElement element)
         {
             elements++;
         }
@@ -17,7 +17,7 @@
             endEmelents++;
         }
 
-        public void Visit(Text text)
+        public void Visit(InnerText text)
         {
             // No op
         }

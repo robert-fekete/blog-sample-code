@@ -1,13 +1,13 @@
 ﻿namespace XmlParser
 {
-    internal class Text : IXmlNode
+    internal class StartingElement : IXmlNode
     {
-        public Text(string value)
+        public StartingElement(string tag)
         {
-            this.Value = value;
+            Tag = tag;
         }
 
-        public string Value { get; }
+        public string Tag { get; }
 
         public void Accept(IXmlVisitor visitor)
         {

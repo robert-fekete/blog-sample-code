@@ -7,7 +7,7 @@ namespace XmlParser
         public List<string> Result { get; } = new List<string>();
         public bool saveText = false;
 
-        public void Visit(Element element)
+        public void Visit(StartingElement element)
         {
             if (element.Tag == "host")
             {
@@ -20,7 +20,7 @@ namespace XmlParser
             saveText = false;
         }
 
-        public void Visit(Text text)
+        public void Visit(InnerText text)
         {
             Result.Add(text.Value);
         }
