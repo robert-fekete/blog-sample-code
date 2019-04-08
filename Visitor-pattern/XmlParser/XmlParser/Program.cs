@@ -29,7 +29,7 @@ namespace XmlParser
                 new EndElement("config")
             };
 
-            var visitor = new CountingNodesVisitor();
+            var visitor = new XmlValidatorVisitor();
             var visitor2 = new CollectingHostAddressVisitor();
             foreach(var node in xmlStream)
             {
@@ -37,7 +37,7 @@ namespace XmlParser
                 node.Accept(visitor2);
             }
 
-            Console.WriteLine(visitor.Result);
+            Console.WriteLine($"XML IsValid: {visitor.IsValid}");
             Console.WriteLine(string.Join(", ", visitor2.Result));
         }
     }
