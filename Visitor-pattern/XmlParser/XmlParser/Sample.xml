@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <site>
+    <host>
+      192.168.0.1
+    </host>
+    <host>
+      192.168.0.2
+    </host>
+    <host>
+      192.168.0.3
+    </host>
+  </site>
+  <site>
+    <host>
+      10.0.0.1
+    </host>
+  </site>
+</config>
